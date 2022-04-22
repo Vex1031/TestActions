@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("testdsaasasddfasdsaddsd")
+        print("testddsaddsd")
         // Do any additionaup after loading the view.
     }
 

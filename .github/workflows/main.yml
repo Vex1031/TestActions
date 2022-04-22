@@ -21,7 +21,7 @@ jobs:
     runs-on: macos-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     env: 
-      XC_VERSION: ${{ '13.2' }}
+      XC_VERSION: ${{ '13.3.1' }}
       XC_PROJECT: ${{ 'TestActions.xcodeproj' }}
       XC_SCHEME: ${{ 'TestActions' }}
     steps:

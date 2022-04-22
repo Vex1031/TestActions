@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [main]
+    branches: [dev]
   pull_request:
-    branches: [main]
+    branches: [features]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,14 +21,14 @@ jobs:
     runs-on: macos-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     env: 
-      XC_VERSION: ${{ '13.3.1' }}
+      XC_VERSION: ${{ '13.2' }}
       XC_PROJECT: ${{ 'TestActions.xcodeproj' }}
       XC_SCHEME: ${{ 'TestActions' }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
+
       # Runs a set of commands using the runners shell
       - name: Start xcode build
         run: | 
-          xcodebuild test -project  "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'generic/platform=iOS Simulator,OS=15.4,name=iPhone 12'
+          xcodebuild test - project  "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13'

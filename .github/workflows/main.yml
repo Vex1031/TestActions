@@ -32,4 +32,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Start xcode build
         run: | 
-           xcodebuild test -project  "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13, OS=latest'
+           xcodebuild test -project  "$XC_PROJECT" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 13, OS=14.4'
